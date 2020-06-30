@@ -173,7 +173,7 @@ const Lazyframe = () => {
 
   function useApi(settings) {
 
-    if (!settings.vendor) return false;
+    if (!settings.vendor || window.innerWidth < 800) return false;
 
     if (!settings.title || !settings.thumbnail) {
       if (settings.vendor === 'youtube' || settings.vendor === 'youtube_nocookie') {
